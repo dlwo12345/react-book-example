@@ -1,14 +1,18 @@
 import React, { Component, Fragment } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import MyComponent from './MyComponent';
+import MyComponent from './component/MyComponent';
+import EventPractice from './component/EventPractice';
 
 class App extends Component {
+
   render() {
     return (
+      // <Fragment>
+      //   <MyComponent name="강낭콩" />
+      //   <MyComponent />
+      // </Fragment>
       <Fragment>
-        <MyComponent />
-        <MyComponent />
+        <EventPractice />
       </Fragment>
     );
   }
