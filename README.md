@@ -1,4 +1,4 @@
-# 빙고게임 만들기
+# 리액트를 다루는 기술 책 따라하기
 
 - 시작: npm run start (초기 접속주소: http://localhost:3000/)
 - 빌드: npm run build
