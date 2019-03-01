@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import './App.css';
 import MyComponent from './component/MyComponent';
 import EventPractice from './component/EventPractice';
 import ValidationSample from './component/ValidationSample';

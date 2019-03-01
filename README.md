@@ -12,4 +12,4 @@
 
 - redux
 
-> npm install react-redux --save
+> npm install redux react-redux --save
