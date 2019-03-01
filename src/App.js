@@ -14,7 +14,8 @@ class App extends Component {
         {/* <MyComponent /> */}
         {/* <EventPractice /> */}
         {/* <ValidationSample /> */}
-        <ScrollBox />
+        <ScrollBox ref={ref => this.scrollBox = ref} />
+        <button onClick={() => this.scrollBox.scrollToBottom()}>맨 아래로 가기</button>
       </Fragment>
     );
   }
