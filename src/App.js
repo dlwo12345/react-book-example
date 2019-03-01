@@ -4,6 +4,7 @@ import MyComponent from './component/MyComponent';
 import EventPractice from './component/EventPractice';
 import ValidationSample from './component/ValidationSample';
 import ScrollBox from './component/ScrollBox';
+import IterationSample from './component/IterationSample';
 
 class App extends Component {
 
@@ -14,8 +15,9 @@ class App extends Component {
         {/* <MyComponent /> */}
         {/* <EventPractice /> */}
         {/* <ValidationSample /> */}
-        <ScrollBox ref={ref => this.scrollBox = ref} />
-        <button onClick={() => this.scrollBox.scrollToBottom()}>맨 아래로 가기</button>
+        {/* <ScrollBox ref={ref => this.scrollBox = ref} /> */}
+        {/* <button onClick={() => this.scrollBox.scrollToBottom()}>맨 아래로 가기</button> */}
+        <IterationSample />
       </Fragment>
     );
   }
