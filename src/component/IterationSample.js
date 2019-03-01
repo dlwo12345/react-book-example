@@ -1,12 +1,63 @@
 import React, { Component } from 'react';
 
 class IterationSample extends Component {
+    state = {
+        names: ['눈사람', '얼음', '눈', '바람'],
+        name: ''
+    }
+
+    handleChange = (e) => {
+        this.setState({
+            name: e.target.value
+        })
+    }
+
+    handleInsert = () => {
+        // names 배열에 값을 추가하고, name 값을 초기화
+        this.setState({
+            names: this.state.names.concat(this.state.name),
+            name: ''
+        });
+    }
+
+    handleButtonClick = () => {
+        this.handleInsert();
+
+        this.input.focus();
+    }
+
+    handleRemove = index => {
+        const { names } = this.state;
+        this.setState({
+            names: [
+                ...names.slice(0, index),
+                ...names.slice(index + 1, names.length)
+            ]
+        });
+    }
+
     render() {
-        const names = ['눈사람', '얼음', '눈', '바람'];
-        const nameList = names.map((name, index) => (<li key={index}>{name}</li>));
+        const nameList = this.state.names.map(
+            (name, i) => (
+                <li key={i}>
+                    {name}
+                    <button onClick={() => { this.handleRemove(i) }}>x</button>
+                </li>
+            )
+        );
+
         return (
             <div>
-                {nameList}
+                <input
+                    ref={ref => this.input = ref}
+                    onChange={this.handleChange}
+                    value={this.state.name}
+                >
+                </input>
+                <button onClick={this.handleButtonClick}>추가</button>
+                <ul>
+                    {nameList}
+                </ul>
             </div>
         );
     }
