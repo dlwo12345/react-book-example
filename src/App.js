@@ -3,6 +3,7 @@ import './App.css';
 import MyComponent from './component/MyComponent';
 import EventPractice from './component/EventPractice';
 import ValidationSample from './component/ValidationSample';
+import ScrollBox from './component/ScrollBox';
 
 class App extends Component {
 
@@ -12,7 +13,8 @@ class App extends Component {
         {/* <MyComponent name="강낭콩" /> */}
         {/* <MyComponent /> */}
         {/* <EventPractice /> */}
-        <ValidationSample />
+        {/* <ValidationSample /> */}
+        <ScrollBox />
       </Fragment>
     );
   }
